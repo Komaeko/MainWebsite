@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="media/icon.png" rel="icon">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Ko Mae Ko</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/w3.css">
+  <link rel="stylesheet" href="styles/css.css">
+  <style>
+  body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+  .w3-quarter img{margin-bottom: -6px; cursor: pointer}
+  .w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+  </style>
+</head>
+
+<body class="w3-light-grey">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index: 3; width: 250px; font-weight: bold; display: none; right: 0px;" id="mySidebar">
+  <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">Close</a> 
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Photography</a> 
+  <a href="#websites" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Websites</a> 
+  <a href="#androidApk" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Android Applications</a> 
+  <a href="#windowsExe" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Windows Applications</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">About Me</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">Ed Barnes</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor: pointer; display: none;" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+  
+  <!-- Photo grid -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="photos">
+      <h4><b>Photography</b></h4>
+    </div>
+  
+  <div class="w3-row w3-grayscale-min">
+    <div class="w3-quarter">
+        <img src="media/lutonhoo.jpg" style="width:100%" onclick="onClick(this)" alt="It's great that someone put this exactly 10.0 miles away from my parents house, it made for a great marathon training run. #3weekstogo (at Luton Hoo Hotel, Golf &amp; Spa)">
+        <img src="media/epping.jpg" style="width:100%" onclick="onClick(this)" alt="at Epping Forest">
+        <img src="media/lloydsbuilding.jpg" style="width:100%" onclick="onClick(this)" alt="One of my favourite buildings in London. (at Lloyds Of London)">
+        <img src="media/angthong.jpg" style="width:100%" onclick="onClick(this)" alt="At Ang Thong National Marine Park, Thailand">
+   </div>
+    
+   <div class="w3-quarter">
+        <img src="media/nlsdc.jpg" style="width:100%" onclick="onClick(this)" alt="Had quite a fun day today #skydiving  (at North London Skydiving Centre)">
+        <img src="media/southwold.jpg" style="width:100%" onclick="onClick(this)" alt="at Southwold Beach">
+        <img src="media/reapsystems.jpg" style="width:100%" onclick="onClick(this)" alt="Went for a drive in this little beauty 100% powered by renewable energy. #reapsystems #sustainabilityweek (at Southampton Docks)">
+        <img src="media/angthong2.jpg" style="width:100%" onclick="onClick(this)" alt="At Ang Thong National Marine Park, Thailand">
+    </div>
+    
+    <div class="w3-quarter">
+        <img src="media/athens.jpg" style="width:100%" onclick="onClick(this)" alt="at Athens, Greece">
+        <img src="media/topofgreece.jpg" style="width:100%" onclick="onClick(this)" alt="at Mitikas 2918, Olympos National Park, Greece">
+        <img src="media/visitorsbook.jpg" style="width:100%" onclick="onClick(this)" alt="I made it to the top (at Mitikas 2918, Olympos National Park, Greece)">
+        <img src="media/hongkong.jpg" style="width:100%" onclick="onClick(this)" alt="Hong Kong Harbour, Hong Kong">
+    </div>
+
+    <div class="w3-quarter">
+        <img src="media/chefchaouen.jpg" style="width:100%" onclick="onClick(this)" alt="Chefchaouen Medina, Morocco">
+        <img src="media/atlas.jpg" style="width:100%" onclick="onClick(this)" alt="at Azilane, Morocco">
+        <img src="media/nye.jpg" style="width:100%" onclick="onClick(this)" alt="at Tangiers, Morocco">
+        <img src="media/stupa.jpg" style="width:100%" onclick="onClick(this)" alt="In Kathmandu, Nepal">
+    </div>
+  </div>
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image" alt="modal content">
+      <p id="caption"></p>
+    </div>
+  </div>
+	
+	<div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="websites">
+	</div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32">
+      <h4><b>Websites</b></h4>
+        <div id="websitelinks">
+            <p><br><a href="http://www.howmanysleepsuntilchristmas.com/" target="_blank">How Many Sleeps Until Christmas - JS Demo</a>
+            <br><a href="http://www.radioactiveseaweed.com/" target="_blank">Radioactive Seaweed - A HTML5/JS Demo</a>
+            <br><a href="http://www.boingdemo.com/" target="_blank">Boing Ball Demo - Amiga Demo in HTML5/JS</a>
+            <!-- <br><a href="websites/diabetestool/diabetestool.html" target="_blank">Diabetes Risk Assesment Tool</a>-->
+            <br><a href="websites/intranet/index.php" target="_blank">Intranet Page - PHP Demo</a>
+            <br><a href="websites/emblembooks/index.html" target="_blank">Emblem Books</a> 
+            <br><a href="websites/bootworld/index.html" target="_blank">Bootworld</a> 
+            <br><a href="websites/athenstravelguide/index.html" target="_blank">Athens Travel Guide</a> 
+            <!-- <br><a href="websites/cafes/cafes.html" target="_blank">Cafes in London </a></p>-->
+	  	</div>
+    </div>
+	
+	<div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="androidApk">
+	</div>
+
+      <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32">
+    <h4><b>Android Applications</b></h4>
+      <div id="apk">
+          <p><a href="applications/HelloWorld.apk" target="_blank">HelloWorld.apk</a></p>
+      </div>
+  </div>
+	
+	<div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="windowsExe">
+	</div>
+	
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32">
+    <h4><b>Windows Applications</b></h4>
+      <div id="exe">
+          <p><a href="applications/HelloWorld.exe" target="_blank">HelloWorld.exe - C# Windows Application</a>
+          <br><a href="applications/Signature.exe" target="_blank">Signature.exe - C Console Application</a>
+          <br><a href="applications/Tron.exe" target="_blank">Tron.exe - C# Console Game</a></p>
+      </div>
+  </div>
+	
+	<div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+	</div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32">
+    <h4><b>About Me</b></h4>
+    <img src="media/me.jpg" alt="Me" width="150" height="150">
+    <div class="w3-content w3-left-align" style="max-width:600px">
+     <hr class="w3-opacity">
+        <h4>Ed Barnes</h4>
+      <div id="links">
+          <p>Linkedin <a href="https://www.linkedin.com/in/edb10" target="_blank">edb10</a>
+          <br> Facebook <a href="https://www.facebook.com/ed.b.10/" target="_blank">ed.b.10</a>  
+          <br> Instagram <a href="https://www.instagram.com/ed.b.10/" target="_blank">@ed.b.10</a> 
+          <br> Twitter <a href="https://twitter.com/komaeko" target="_blank">@komaeko</a> 
+          <br> Web <a href="http://www.komaeko.net/" target="_blank">http://www.komaeko.net/</a> <br> </p>
+			</div>
+      <hr class="w3-opacity">
+      </div>
+    </div>
+
+  <!-- Footer -->
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+</body>
+</html>
+
+
+<!--
+
+Made by Ed Barnes
+    __ __          __  ___                __ __          ___   ____  ___ ____ 
+   / //_/____     /  |/  /____ _ ___     / //_/____     |__ \ / __ \<  /( __ )
+  / ,<  / __ \   / /|_/ // __ `// _ \   / ,<  / __ \    __/ // / / // // __  |
+ / /| |/ /_/ /  / /  / // /_/ //  __/  / /| |/ /_/ /   / __// /_/ // // /_/ / 
+/_/ |_|\____/  /_/  /_/ \__,_/ \___/  /_/ |_|\____/   /____/\____//_/ \____/  
+
+www.komaeko.net
+
+-->
