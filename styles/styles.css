@@ -1,0 +1,41 @@
+@font-face {
+	font-family: 'robotoRegular';
+	src: url("../fonts/Roboto-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	}
+
+body {
+    font-family: 'robotoRegular', Verdana, sans-serif;
+    color: #ffffff; 
+	background-color: #000000;
+	margin: auto;
+	max-width: 98%;
+}
+/*
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+*/
+Section {
+    width: 100%;
+	clear: both;
+	overflow:hidden;
+	padding: 1%;
+	margin-bottom: 1%;
+}
+
+p {
+	font-family: 'robotoRegular', Verdana, sans-serif;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	margin-right: 1%;
+}
